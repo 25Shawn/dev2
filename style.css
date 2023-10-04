@@ -1,0 +1,72 @@
+body{
+    margin: 0px;
+    background-image: url(https://apical.xyz/medias/commun/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-left: 23%;
+}
+#image_apical{
+    margin-top: 5%;
+    width: 125%;
+}
+.menuicones{
+    margin-left: 25%;
+}
+.icone img{
+    width: 24px;
+    text-shadow: 2px 2px #ff0000;
+}
+.icone{
+    margin-left: 10px;
+}
+
+.nav_bar_principale{
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc; 
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+li a{
+    text-decoration: none;
+    font-family: raleway;
+    color: #585656;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+li a:hover{
+    color: #212529;
+}
+
+.nav_lien{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.fa-solid{
+    font-size: 10px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
