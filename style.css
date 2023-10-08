@@ -3,6 +3,7 @@ body{
     background-image: url(https://apical.xyz/medias/commun/bg.jpg);
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
@@ -31,11 +32,14 @@ body{
 }
 
 .icone img{
-    width: 24px;
+    width: 25px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
 .icone{
     margin-left: 15px;
+    
 }
 
 .nav_bar_principale{
@@ -47,6 +51,16 @@ body{
     padding: 0.5rem 1rem;
 }
 
+.icone_dropdown{
+    margin-top: 10px;
+    margin-left: 30px;
+    
+}
+
+.dropdown-toggle{
+    margin-bottom: 10px;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -54,6 +68,8 @@ body{
     border: 1px solid #ccc;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    border-radius: 3px;
+    
 }
 
 .dropdown:hover .dropdown-menu {
@@ -62,12 +78,21 @@ body{
 
 li a{
     text-decoration: none;
-    font-family: Raleway, sans-serif;;
+    font-family: Raleway, sans-serif;
     color: #585656;
     font-size: 0.8rem;
     font-weight: 500;
     display: flex;
     align-items: center;
+}
+
+.dropdown-icone{
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    font-family: Raleway, sans-serif;
+    color: #585656;
 }
 
 .dropdown-item{
@@ -100,9 +125,139 @@ li a:hover{
 a{
     text-decoration: none;
 }
-/* ------------------- Header Fin -------------------*/
 
+#popup_authentification{
+    display: none;
+    position: fixed;
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 15px;
+    text-shadow: none;
+    z-index: 1;
+    position: absolute;
+    padding-top: 50px;
+    margin-top: 25px;
+}
+.container_formulaire{
+    display: flex;
+    font-size: 15px;
+}
+.premier_container{
+    gap: 80px;
+}
+.deuxieme_container{
+    gap: 37px;
+}
+.troisieme_container{
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+#sous_container_checkbox{
+    width: 100px;
+}
+.sous_container_input{
+    margin-bottom: 20px;
+    margin-right: 35px;
+}
+.input{
+    height: 35px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.bouton {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-left: 140px;
+}
+.soumettre_formulaire {
+    text-shadow: none;
+    
+    background-image: linear-gradient(to bottom,#fff 0,#d5d5c8 100%);
+    background-repeat: repeat-x;
+    border-color: #ccc;
+    background-color: transparent;
+    box-shadow: 0 3px 3px 0 rgba(33,37,41,.15);
+    margin-bottom: 1rem;
+}
+
+.soumettre_formulaire:hover{
+    text-shadow: none;
+    background-repeat: repeat-x;
+    border-color: #ccc;
+    background-color: transparent;
+    box-shadow: 0 3px 3px 0 rgba(33,37,41,.15);
+    margin-bottom: 1rem;
+    background-image: linear-gradient(to top,#fff 0,#d5d5c8 100%);
+}
+
+.nouvel_usager{
+    margin-left: 140px;
+    color: blue;
+}
+.nouvel_usager:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+.fermeture_popup{
+    display: none;
+    background-color: black;
+    opacity: 0.5;
+    width: 16px;
+    height: 16px;
+    border-radius: 100px;
+    padding: 1px;
+    z-index: 2;
+    position: absolute;
+    left: 355px;
+    top: 18px;
+}
+
+.sous_fermeture{
+    margin-top: 2px;
+}
+.fa-x{
+    color: white;
+}
+#popup_authentification_principale{
+    position: relative;
+}
+/* ------------------- Header Fin -------------------*/
+/* ------------------- Contenu -------------------*/
+.contenu_principale{
+    display: flex;
+    justify-content: center;
+    
+}
+.contenu{
+    background-color: #f7f7f7;
+    height: 100px;
+}
+/* ------------------- Contenu Fin -------------------*/
 /* ------------------- footer ------------------- */
+
+.container_pareil{
+    width: 960px;
+}
 
 #sous_container_footer{
     padding-top: 25px;
@@ -122,11 +277,16 @@ a{
     color: #1F51FF;
 }
 
-.publicite{
-    background-color: #f7f7f7;
+.container_publicite{
     display: flex;
     justify-content: center;
+}
+
+.publicite{
+    background-color: #f7f7f7;
     text-align: center;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -135,7 +295,7 @@ a{
     color: #1F51FF;
 }
 
-#hr_premier{
+.hr_premier{
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -174,7 +334,6 @@ hr{
 
 .btn-primary {
     text-shadow: none;
-    
     background-image: linear-gradient(to bottom,#fff 0,#d5d5c8 100%);
     background-repeat: repeat-x;
     border-color: #ccc;
