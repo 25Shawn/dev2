@@ -8,13 +8,20 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://apical.xyz/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://apical.xyz/favicon-16x16.png">
     <link rel="stylesheet" href="/wp-content/themes/dev2/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple&family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e538d494e4.js" crossorigin="anonymous"></script>
     <script defer src="/wp-content/themes/dev2/js/popup.js"></script>
 
 </head>
 <body>
+    <?php
+        if (is_404()) {
+            get_template_part('404');
+            exit();
+        }
+    ?>
     
     <header id="container_header_principale">
         
@@ -36,7 +43,7 @@
 
 
                     <div class=" dropdown">
-                        <a href="#" class=" ouvrirpopuprecherche dropdown-toggle" data-target="#popuprecherche"><img class="icone" src="https://apical.xyz/medias/commun/Rechercher-MenuSecondaire.svg" alt="Recherche"/></a>
+                        <a href="#" class="recherche ouvrirpopuprecherche dropdown-toggle" data-target="#popuprecherche"><img class="icone" src="https://apical.xyz/medias/commun/Rechercher-MenuSecondaire.svg" alt="Recherche"/></a>
                         <div class="dropdown-menu icone_dropdown">
                             <a href="https://apical.xyz" class="dropdown-icone ">Rechercher</a>
                         </div>
@@ -50,6 +57,24 @@
                     
                         
                 </div>
+
+                
+                <div class="popup_barre_recherche_principale">
+
+                    <div class="fermeture_barre_recherche">
+                        <div class="sous_fermeture">
+                            <i class="fa-solid fa-x"></i>
+                        </div>
+                    </div>
+                    <div class="barre_recherche">
+                            
+                        <div id="popup_recherche">
+                            <?php get_search_form(); ?>
+                        </div>
+                            
+                    </div>
+                </div>
+                
                 
                 <div id="popup_authentification_principale">
 
@@ -106,7 +131,7 @@
         <ul class="nav_bar_principale">
 
             <li class="nav_lien">
-                <a href="https://apical.xyz/formations" class=" nav-link text-uppercase text-expanded active">
+                <a href="index.php" class=" nav-link text-uppercase text-expanded active">
 
                 <!-- boucle pour afficher posts -->
                 <?php
@@ -218,7 +243,7 @@ else :
                 ?>
                     <?php the_title(); ?>
 
-                <?php
+                <?php 
                     endwhile;
                     wp_reset_postdata(); // Réinitialise la requête
 else :

@@ -11,7 +11,7 @@
 
 
 
-<hr class="container_pareil">
+<hr class="hr_deuxieme container_pareil">
 <footer id="container_footer_principale">
 
     <div id="sous_container_footer">
