@@ -9,6 +9,8 @@ body{
 }
 
 /* ------------------- Header ------------------- */
+
+
 #logo{
     display: flex;
     justify-content: center;
@@ -39,7 +41,6 @@ body{
 
 .icone{
     margin-left: 15px;
-    
 }
 
 .nav_bar_principale{
@@ -127,17 +128,25 @@ a{
     text-decoration: none;
 }
 
+.message_erreur{
+    display: block;
+    color: red;
+    margin-bottom: 30px;
+}
+
 #popup_authentification{
     display: none;
     position: fixed;
     background: #fff;
     border: 1px solid black;
     border-radius: 6px;
-    padding: 15px;
+    padding-top: 10px;
+    padding-left:15px;
+    padding-bottom:15px;
+    padding-right:15px;
     text-shadow: none;
     z-index: 1;
     position: absolute;
-    padding-top: 50px;
     margin-top: 25px;
 }
 .container_formulaire{
@@ -228,7 +237,7 @@ a{
     padding: 1px;
     z-index: 2;
     position: absolute;
-    left: 355px;
+    left: 350px;
     top: 18px;
 }
 
@@ -254,10 +263,12 @@ a{
     padding: 1px;
     z-index: 2;
     position: absolute;
-    left: 1085px;
+    left: 1208px;
     top: 155px;
     
+    
 }
+
 .barre_recherche{
     display: none;
     position: fixed;
@@ -360,8 +371,6 @@ a{
     background-color: transparent;
     box-shadow: 0 3px 3px 0 rgba(33,37,41,.15);
     margin-bottom: 1rem;
-    border-color:#585656;
-
 }
 
 .bouton_reduit:hover{

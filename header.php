@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e538d494e4.js" crossorigin="anonymous"></script>
-    <script defer src="/wp-content/themes/dev2/js/popup.js"></script>
+    <script defer src="/wp-content/themes/dev2/js/script.js"></script>
 
 </head>
 <body>
@@ -83,21 +83,26 @@
                             <i class="fa-solid fa-x"></i>
                         </div>
                     </div>
+                    
                     <div id="popup_authentification">
+                        <div class="message_erreur"></div>
                         <div id="contenu_formulaire">
+
                             
+
                             <form action="#" method="post" id="formulaire_login">
 
                                 <div class="container_formulaire premier_container">
                                     <label for="login">*Usager: </label>
                                     <div class="sous_container_input">
-                                        <input type="text" id="login" class="input">
+                                        <input type="text" id="login" class="input input_usager">
                                     </div>
                                 </div>
                                 <div class="container_formulaire deuxieme_container">
                                     <label for="password">*Mot de passe: </label>
                                     <div class="sous_container_input">
-                                        <input type="password" id="password" class="input">
+                                        
+                                        <input type="password" id="password" class="input input_mot_de_passe">
                                     </div>
                                 </div>
                                 <div class="container_formulaire troisieme_container">
@@ -107,7 +112,7 @@
                                 </div>
 
                                 <div  class="container_formulaire">
-                                    <a class="soumettre_formulaire bouton" href="#">Soumettre</a>
+                                    <a type="submit" class="soumettre_formulaire bouton" href="#">Soumettre</a>
                                 </div>
 
                                 <div class="container_formulaire">
