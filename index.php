@@ -23,11 +23,13 @@
             if ($post) :
                 setup_postdata($post);
         ?>
-            <div class="post-content">
-                <?php the_content(); ?>
-            </div>
+
+        <div class="post-content">
+            <?php the_content(); ?>
+        </div>
+
         <?php
-                wp_reset_postdata(); // Reset post data
+                wp_reset_postdata();
 else :
                 echo 'Post not found.';
             endif;

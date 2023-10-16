@@ -16,12 +16,7 @@
 
 </head>
 <body>
-    <?php
-        if (is_404()) {
-            get_template_part('404');
-            exit();
-        }
-    ?>
+    
     
     <header id="container_header_principale">
         
@@ -172,8 +167,8 @@ else :
                 <!-- boucle pour afficher posts -->
                 <?php
                     $args = array(
-                    'post_type' => 'post', // Type de contenu (les articles)
-                    'posts_per_page' => 1, // Limitez le nombre de publications à 3
+                    'post_type' => 'post',
+                    'posts_per_page' => 1, 
                     'category_name' => 'blogue'
                     );
                     $query = new WP_Query($args);
@@ -184,7 +179,7 @@ else :
 
                 <?php
                     endwhile;
-                    wp_reset_postdata(); // Réinitialise la requête
+                    wp_reset_postdata(); 
 else :
                 ?>
                 <p><?php esc_html_e('No posts found.', 'your-theme-text-domain'); ?></p>
@@ -202,8 +197,8 @@ else :
                 <!-- boucle pour afficher posts -->
                 <?php
                     $args = array(
-                    'post_type' => 'post', // Type de contenu (les articles)
-                    'posts_per_page' => 1, // Limitez le nombre de publications à 3
+                    'post_type' => 'post', 
+                    'posts_per_page' => 1, 
                     'category_name' => 'outils'
 
                     );
@@ -215,7 +210,7 @@ else :
 
                 <?php
                     endwhile;
-                    wp_reset_postdata(); // Réinitialise la requête
+                    wp_reset_postdata();
 else :
                 ?>
                 <p><?php esc_html_e('No posts found.', 'your-theme-text-domain'); ?></p>
@@ -236,8 +231,8 @@ else :
                 <!-- boucle pour afficher posts -->
                 <?php
                     $args = array(
-                    'post_type' => 'post', // Type de contenu (les articles)
-                    'posts_per_page' => 1, // Limitez le nombre de publications à 3
+                    'post_type' => 'post',
+                    'posts_per_page' => 1, 
                     'category_name' => 'aide'
 
                     );
@@ -250,7 +245,7 @@ else :
 
                 <?php 
                     endwhile;
-                    wp_reset_postdata(); // Réinitialise la requête
+                    wp_reset_postdata();
 else :
                 ?>
                 <p><?php esc_html_e('No posts found.', 'your-theme-text-domain'); ?></p>

@@ -23,7 +23,7 @@
         </div>
         <div class="container_footer">
             <div class="row">
-                <div class="col text-center">Conception et développement de la plateforme : <span class="auteur"><a href="https://christianelagace.com" target="_blank">Christiane Lagacé</a></span></div>
+                <div class="col text-center">Conception et développement de la plateforme : <span class="auteur"><a class="auteur_a" href="https://christianelagace.com" target="_blank">Christiane Lagacé</a></span></div>
             </div>
         </div>
         <div class="container_footer">

@@ -490,6 +490,10 @@ ul{
 
 }
 
+.auteur_a{
+    color: blue;
+}
+
 .auteur{
     color: blue;
     font-family: 'Homemade Apple',cursive;
@@ -498,7 +502,7 @@ ul{
     padding: 5px 14px 0 0;
 }
 
-.auteur:hover{
+.auteur_a:hover{
     text-decoration: underline;
     color: #1F51FF;
 }
