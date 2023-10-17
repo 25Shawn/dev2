@@ -124,143 +124,30 @@
             
         </div>
 
-        
-        
-
-        
         <ul class="nav_bar_principale">
 
             <li class="nav_lien">
-                <a href="index.php" class=" nav-link text-uppercase text-expanded active">
-
-                <!-- boucle pour afficher posts -->
-                <?php
-                    $args = array(
-                    'post_type' => 'post', // Type de contenu (les articles)
-                    'posts_per_page' => 1, // Limitez le nombre de publications à 3
-                    'category_name' => 'formations'
-                    );
-                    $query = new WP_Query($args);
-                    if ($query->have_posts()) :
-                        while ($query->have_posts()) : $query->the_post();
-                        
-
+            <?php
+                // Generate a list of all WordPress pages
+                $args = array(
+                    'title_li' => '', // Removes the "Pages" title
+                    'echo'     => 0, // Return the HTML instead of echoing it
+                );
+                $pages = wp_list_pages($args);
+            
+                // Check if there are pages to display
+                if ($pages) {
+                    // Wrap each page link with a menu class
+                    $pages = str_replace('<a', '<a class="menu"', $pages);
+                    echo $pages;
+                }
                 ?>
-                    <?php the_title(); ?>
-
-                <?php
-                    endwhile;
-                    wp_reset_postdata(); // Réinitialise la requête
-else :
-                ?>
-                <p><?php esc_html_e('No posts found.', 'your-theme-text-domain'); ?></p>
-                <?php
-                    endif;
-                ?>
-                </a>
 
             </li>
 
-            <li class="nav_lien">
-                <a href="https://apical.xyz/articles" class="nav-link text-uppercase text-expanded ">
-
-                <!-- boucle pour afficher posts -->
-                <?php
-                    $args = array(
-                    'post_type' => 'post',
-                    'posts_per_page' => 1, 
-                    'category_name' => 'blogue'
-                    );
-                    $query = new WP_Query($args);
-                    if ($query->have_posts()) :
-                        while ($query->have_posts()) : $query->the_post();
-                ?>
-                    <?php the_title(); ?>
-
-                <?php
-                    endwhile;
-                    wp_reset_postdata(); 
-else :
-                ?>
-                <p><?php esc_html_e('No posts found.', 'your-theme-text-domain'); ?></p>
-                <?php
-                    endif;
-                ?>
-                
-                </a>
-            </li>
-
-
-            <li class="nav_lien dropdown">
-                <a href="https://apical.xyz/pages/formulairebcrypt" class="dropdown-toggle nav-link text-uppercase text-expanded">
-
-                <!-- boucle pour afficher posts -->
-                <?php
-                    $args = array(
-                    'post_type' => 'post', 
-                    'posts_per_page' => 1, 
-                    'category_name' => 'outils'
-
-                    );
-                    $query = new WP_Query($args);
-                    if ($query->have_posts()) :
-                        while ($query->have_posts()) : $query->the_post();
-                ?>
-                    <?php the_title(); ?>
-
-                <?php
-                    endwhile;
-                    wp_reset_postdata();
-else :
-                ?>
-                <p><?php esc_html_e('No posts found.', 'your-theme-text-domain'); ?></p>
-                <?php
-                    endif;
-                ?>
-                <i class="fa-solid fa-caret-up fa-rotate-180"></i></a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item " href="https://apical.xyz/pages/formulairebcrypt">Hachage bcrypt </a>
-                    <a class="dropdown-item " href="https://apical.xyz/pages/aleatoire">Générateur aléatoire </a>
-                    <a class="dropdown-item " href="https://apical.xyz/pages/fontAwesome">Icônes Font Awesome </a>
-                </div>
-            </li>
-
-            <li class="nav_lien dropdown">
-                <a href="https://apical.xyz/contact" class="dropdown-toggle nav-link text-uppercase text-expanded ">
-
-                <!-- boucle pour afficher posts -->
-                <?php
-                    $args = array(
-                    'post_type' => 'post',
-                    'posts_per_page' => 1, 
-                    'category_name' => 'aide'
-
-                    );
-                    $query = new WP_Query($args);
-                    if ($query->have_posts()) :
-                        while ($query->have_posts()) : $query->the_post();
-                        
-                ?>
-                    <?php the_title(); ?>
-
-                <?php 
-                    endwhile;
-                    wp_reset_postdata();
-else :
-                ?>
-                <p><?php esc_html_e('No posts found.', 'your-theme-text-domain'); ?></p>
-                <?php
-                    endif;
-                ?>
-                    
-                <i class="fa-solid fa-caret-up fa-rotate-180"></i></a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item " href="https://apical.xyz/contact">Contact </a>
-                    <a class="dropdown-item " href="https://apical.xyz/apropos">À propos </a>
-                </div>
-            </li>
 
         </ul>
  
+        
 
 </header>

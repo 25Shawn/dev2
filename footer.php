@@ -18,12 +18,12 @@
 
         <div class="container_footer">
             <div class="row">
-                <div class="col text-center">© 2023 Tous droits réservés.</div>
+                <div class="col text-center">© <?php echo date('Y'); ?> Tous droits réservés.</div>
             </div>
         </div>
         <div class="container_footer">
             <div class="row">
-                <div class="col text-center">Conception et développement de la plateforme : <span class="auteur"><a class="auteur_a" href="https://christianelagace.com" target="_blank">Christiane Lagacé</a></span></div>
+                <div class="col text-center">Conception et développement de la plateforme : <span class="auteur"><a class="auteur_a" href="https://christianelagace.com" target="_blank"> Shawn Dutil</a></span></div>
             </div>
         </div>
         <div class="container_footer">
