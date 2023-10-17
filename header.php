@@ -127,20 +127,21 @@
         <ul class="nav_bar_principale">
 
             <li class="nav_lien">
-            <?php
-                // Generate a list of all WordPress pages
-                $args = array(
-                    'title_li' => '', // Removes the "Pages" title
-                    'echo'     => 0, // Return the HTML instead of echoing it
-                );
-                $pages = wp_list_pages($args);
-            
-                // Check if there are pages to display
-                if ($pages) {
-                    // Wrap each page link with a menu class
-                    $pages = str_replace('<a', '<a class="menu"', $pages);
-                    echo $pages;
-                }
+
+                <?php
+                
+                    $args = array(
+                        'title_li' => '', 
+                        'echo'     => 0, 
+                    );
+                    $pages = wp_list_pages($args);
+                
+                    
+                    if ($pages) {
+                        
+                        $pages = str_replace('<a', '<a class="menu"', $pages);
+                        echo $pages;
+                    }
                 ?>
 
             </li>

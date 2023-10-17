@@ -1,10 +1,9 @@
 <?php
-if (have_comments()) :
-    
-    // Affiche la liste des commentaires
-    wp_list_comments();
-    
-endif;
+    if (have_comments()) :
+        
+        wp_list_comments();
+        
+    endif;
 ?>
 
 
