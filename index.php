@@ -19,9 +19,7 @@
 
         <?php
             $args = array(
-                'post_type' => 'post',
-                'posts_per_page' => 1, 
-                'category_name' => 'Formations'
+                'post_type' => 'post'
             );
             $query = new WP_Query($args);
 
@@ -45,7 +43,6 @@
 
         <?php 
 
-            comment_form();
             endwhile;
 
             wp_reset_postdata();

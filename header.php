@@ -132,13 +132,13 @@
                 
                     $args = array(
                         'title_li' => '', 
-                        'echo'     => 0, 
+                        'echo' => 0, 
                     );
                     $pages = wp_list_pages($args);
                 
-                    
+
                     if ($pages) {
-                        
+
                         $pages = str_replace('<a', '<a class="menu"', $pages);
                         echo $pages;
                     }
