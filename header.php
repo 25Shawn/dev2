@@ -85,16 +85,16 @@
 
                             
 
-                            <form action="#" method="post" id="formulaire_login">
+                            <form action="<?php echo esc_url(admin_url('index.php')); ?>" method="post" id="formulaire_login">
 
                                 <div class="container_formulaire premier_container">
-                                    <label for="login">*Usager: </label>
+                                    <label for="login" name="login">*Usager: </label>
                                     <div class="sous_container_input">
                                         <input type="text" id="login" class="input input_usager">
                                     </div>
                                 </div>
                                 <div class="container_formulaire deuxieme_container">
-                                    <label for="password">*Mot de passe: </label>
+                                    <label for="password" name="password">*Mot de passe: </label>
                                     <div class="sous_container_input">
                                         
                                         <input type="password" id="password" class="input input_mot_de_passe">
@@ -107,7 +107,7 @@
                                 </div>
 
                                 <div  class="container_formulaire">
-                                    <a type="submit" class="soumettre_formulaire bouton" href="#">Soumettre</a>
+                                    <button type="submit" class="soumettre_formulaire bouton">Soumettre</button>
                                 </div>
 
                                 <div class="container_formulaire">

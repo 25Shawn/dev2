@@ -148,6 +148,6 @@ function ValiderFormulaire(){
 
 
     if(valeur){
-        formulaire.onsubmit;
+        formulaire.onsubmit();
     }
 }
